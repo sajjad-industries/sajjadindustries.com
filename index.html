@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sajjad Industries | Business solutions and consultancy</title>
+  <meta name="description" content="Sajjad Industries provides business solutions and consultancy across software, engineering and infrastructure. The full site is on its way.">
+  <link rel="canonical" href="https://sajjadindustries.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sajjad Industries">
+  <meta property="og:title" content="Sajjad Industries | Business solutions and consultancy">
+  <meta property="og:description" content="Business solutions and consultancy across software, engineering and infrastructure. The full site is on its way.">
+  <meta property="og:url" content="https://sajjadindustries.com/">
+  <meta property="og:image" content="https://sajjadindustries.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sajjad Industries">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Nothing leaves this origin: no scripts, no third-party requests, no form. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <style>
+    /* Values from brand/tokens/tokens.css (Sajjad Industries design tokens v1.1.0), inlined.
+       Type sizes are the token px values written in rem (16 px = 1 rem) so they follow the
+       reader's own text size. */
+    @font-face {
+      font-family: "IBM Plex Sans";
+      src: url("fonts/IBMPlexSans-Variable.woff2") format("woff2");
+      font-weight: 100 700;
+      font-stretch: 75% 100%;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --si-black: #000000;
+      --si-grey-700: #333333;
+      --si-grey-500: #6B6B6B;
+      --si-grey-300: #B0B0B0;
+      --si-grey-200: #D4D4D4;
+      --si-grey-100: #EBEBEB;
+      --si-white: #FFFFFF;
+      --si-accent: #F25C05;
+      --si-accent-ink: #000000;
+
+      /* semantic (light) */
+      --si-bg: var(--si-white);
+      --si-fg: var(--si-black);
+      --si-fg-body: var(--si-grey-700);
+      --si-fg-muted: var(--si-grey-500);
+      --si-border: var(--si-grey-200);
+
+      --si-space-1: 4px;
+      --si-space-2: 8px;
+      --si-space-3: 12px;
+      --si-space-4: 16px;
+      --si-space-5: 20px;
+      --si-space-6: 24px;
+      --si-space-8: 32px;
+      --si-space-10: 40px;
+      --si-space-12: 48px;
+      --si-space-16: 64px;
+
+      --si-font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+      --si-weight-regular: 400;
+      --si-weight-medium: 500;
+      --si-weight-semibold: 600;
+      --si-weight-bold: 700;
+
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        /* semantic (dark) */
+        --si-bg: var(--si-black);
+        --si-fg: var(--si-white);
+        --si-fg-body: var(--si-grey-100);
+        --si-fg-muted: var(--si-grey-300);
+        --si-border: var(--si-grey-700);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: var(--si-bg);
+      color: var(--si-fg-body);
+      font-family: var(--si-font-sans);
+      font-size: 1rem;      /* body 16/24 */
+      line-height: 1.5rem;
+      font-weight: var(--si-weight-regular);
+    }
+    p, h1, h2 { margin: 0; }
+
+    .wrap {
+      width: 100%;
+      max-width: 1080px;
+      margin-inline: auto;
+      padding-left: max(var(--si-space-6), env(safe-area-inset-left, 0px));
+      padding-right: max(var(--si-space-6), env(safe-area-inset-right, 0px));
+    }
+
+    /* Header: horizontal lockup at 16 px cap height, 24 px from 720 px up. Clear space of one
+       cap height is kept on every side by the paddings below. */
+    header { padding-block: var(--si-space-8); }
+    .lockup, .lockup img { display: block; width: 266px; height: 16px; }
+
+    main { display: flex; align-items: center; padding-block: var(--si-space-8) var(--si-space-16); }
+    main .wrap { display: flex; flex-direction: column; align-items: flex-start; }
+
+    .label {            /* label 12/16, uppercase, 0.08em */
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.08em;
+      font-weight: var(--si-weight-medium);
+      text-transform: uppercase;
+      color: var(--si-fg-muted);
+    }
+    h1 {                /* h1 40/48 bold; display 64/72 from 720 px up */
+      margin-top: var(--si-space-4);
+      max-width: 14em;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      letter-spacing: -0.02em;
+      font-weight: var(--si-weight-bold);
+      color: var(--si-fg);
+      text-wrap: balance;
+    }
+    .lead {             /* lead 18/28 */
+      margin-top: var(--si-space-6);
+      max-width: 34em;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    /* Secondary motif, once: the stair rule from brand/logo/motif-stair.svg at 4 px per unit. */
+    .stair { display: block; width: 192px; height: 52px; margin-block: var(--si-space-10); fill: var(--si-fg); }
+
+    h2 {                /* h4 20/28 semibold */
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      letter-spacing: -0.005em;
+      font-weight: var(--si-weight-semibold);
+      color: var(--si-fg);
+    }
+    .contact p { margin-top: var(--si-space-2); max-width: 34em; }
+
+    /* The one accent on the page. It comes from --si-accent and --si-accent-ink alone, so a
+       change of accent colour is a change to those two values. */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--si-space-3);
+      max-width: 100%;
+      margin-top: var(--si-space-6);
+      padding: var(--si-space-4);
+      background: var(--si-accent);
+      color: var(--si-accent-ink);
+      font-size: 1rem;      /* body 16/24; lead 18 from 720 px up */
+      line-height: 1.5rem;
+      font-weight: var(--si-weight-semibold);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+    .cta:hover { background: var(--si-fg); color: var(--si-bg); }
+    .cta:focus-visible { outline: 2px solid var(--si-fg); outline-offset: 4px; }
+    .cta span { flex: none; }
+
+    footer { border-top: 1px solid var(--si-border); padding-block: var(--si-space-6) var(--si-space-8); }
+    footer p {          /* caption 12/16 */
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.01em;
+      color: var(--si-fg-muted);
+    }
+    footer p + p { margin-top: var(--si-space-1); }
+
+    @media (max-width: 359px) {
+      .wrap {
+        padding-left: max(var(--si-space-4), env(safe-area-inset-left, 0px));
+        padding-right: max(var(--si-space-4), env(safe-area-inset-right, 0px));
+      }
+      .cta span { display: none; }
+    }
+    @media (min-width: 720px) {
+      .wrap {
+        padding-left: max(var(--si-space-12), env(safe-area-inset-left, 0px));
+        padding-right: max(var(--si-space-12), env(safe-area-inset-right, 0px));
+      }
+      header { padding-block: var(--si-space-12); }
+      .lockup, .lockup img { width: 399px; height: 24px; }
+      main { padding-block: var(--si-space-4) var(--si-space-12); }
+      h1 { font-size: 4rem; line-height: 4.5rem; letter-spacing: -0.025em; }
+      .cta { padding-inline: var(--si-space-5); font-size: 1.125rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <picture class="lockup">
+        <source srcset="brand/lockup-horizontal-white.svg" media="(prefers-color-scheme: dark)">
+        <img src="brand/lockup-horizontal-black.svg" width="266" height="16" alt="Sajjad Industries">
+      </picture>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <p class="label">Business solutions and consultancy</p>
+      <h1>Practical answers for working businesses.</h1>
+      <p class="lead">Sajjad Industries provides business solutions and consultancy across software, engineering and infrastructure.</p>
+
+      <svg class="stair" viewBox="0 0 48 13" aria-hidden="true" focusable="false"><path d="M0 0H4V1H8V2H12V3H16V4H20V5H24V6H28V7H32V8H36V9H40V10H44V11H48V13H44V12H40V11H36V10H32V9H28V8H24V7H20V6H16V5H12V4H8V3H4V2H0Z"/></svg>
+
+      <div class="contact">
+        <h2>The full site is on its way.</h2>
+        <p>Until then, the quickest way to get in touch is by email.</p>
+        <a class="cta" href="mailto:hello@sajjadindustries.com">hello@sajjadindustries.com <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Mohammed Shabaan Sajjad trading as Sajjad Industries</p>
+    </div>
+  </footer>
+</body>
+</html>
